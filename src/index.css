@@ -1,4 +1,7 @@
 @import-normalize; /* bring in normalize.css styles */
+@import './components/Profile/profile.css';
+@import './components/Statistics/statistics.css';
+@import './components/FriendList/friendList.css';
 
 body {
   margin: 0;
@@ -7,6 +10,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 code {
