@@ -17,14 +17,14 @@
   padding: 0;
 }
 
-.stat-list {
+.statList {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 15px;
 }
 
-.stat-list .item {
+.statListItem {
   display: flex;
   row-gap: 8px;
   justify-content: center;

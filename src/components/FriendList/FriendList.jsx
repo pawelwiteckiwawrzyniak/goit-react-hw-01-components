@@ -1,19 +1,20 @@
 import PropTypes from 'prop-types';
 import { Fragment } from 'react';
+import css from './FriendList.module.css';
 
 const FriendListItem = ({ avatar, name, isOnline }) => (
   <Fragment>
     {isOnline}
-    <span className="status">{isOnline}</span>
-    <img className="avatar" src={avatar} alt="User avatar" width="48" />
-    <p className="name">{name}</p>
+    <span className={css.status}>{isOnline}</span>
+    <img src={avatar} alt="User avatar" width="48" />
+    <p>{name}</p>
   </Fragment>
 );
 
 export const FriendList = ({ friends }) => (
-  <ul className="friend-list">
+  <ul className={css.friendList}>
     {friends.map(friend => (
-      <li className="item" key={friend.id}>
+      <li className={css.friendListItem} key={friend.id}>
         <FriendListItem
           avatar={friend.avatar}
           name={friend.name}

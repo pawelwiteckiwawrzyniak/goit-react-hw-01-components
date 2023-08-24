@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
+import css from './Statistics.module.css';
 
 export const Statistics = ({ title, stats }) => (
-  <section className="statistics">
-    {title !== undefined && <h2 className="title">{title}</h2>}
-    <ul className="stat-list">
+  <section className={css.statistics}>
+    {title !== undefined && <h2 className={css.title}>{title}</h2>}
+    <ul className={css.statList}>
       {stats.map(stat => (
-        <li className="item" key={stat.id}>
-          <span className="label">{stat.label}</span>
-          <span className="percentage">{stat.percentage}%</span>
+        <li className={css.statListItem} key={stat.id}>
+          <span>{stat.label}</span>
+          <span>{stat.percentage}%</span>
         </li>
       ))}
     </ul>

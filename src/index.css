@@ -1,7 +1,4 @@
 @import-normalize; /* bring in normalize.css styles */
-@import './components/Profile/profile.css';
-@import './components/Statistics/statistics.css';
-@import './components/FriendList/friendList.css';
 
 body {
   margin: 0;
