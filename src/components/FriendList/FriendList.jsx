@@ -4,8 +4,11 @@ import css from './FriendList.module.css';
 
 const FriendListItem = ({ avatar, name, isOnline }) => (
   <Fragment>
-    {isOnline}
-    <span className={css.status}>{isOnline}</span>
+    {isOnline ? (
+      <span className={css.statusIsOnline}></span>
+    ) : (
+      <span className={css.statusIsOffline}></span>
+    )}
     <img src={avatar} alt="User avatar" width="48" />
     <p>{name}</p>
   </Fragment>

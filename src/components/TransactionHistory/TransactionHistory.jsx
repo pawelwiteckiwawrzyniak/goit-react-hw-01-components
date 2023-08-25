@@ -5,20 +5,22 @@ export const TransactionHistory = ({ items }) => (
   <table className={css.transactions}>
     <thead>
       <tr>
-        <th>Type</th>
-        <th>Amount</th>
-        <th>Currency</th>
+        <th className={css.tableHead}>Type</th>
+        <th className={css.tableHead}>Amount</th>
+        <th className={css.tableHead}>Currency</th>
       </tr>
     </thead>
     <tbody>
       {items.map(({ id, type, amount, currency }) => (
         <tr key={id}>
-          {type === 'invoice' && <td className={css.table}>Invoice</td>}
-          {type === 'withdrawal' && <td className={css.table}>Withdrawal</td>}
-          {type === 'deposit' && <td className={css.table}>Deposit</td>}
-          {type === 'payment' && <td className={css.table}>Payment</td>}
-          <td className={css.table}>{amount}</td>
-          <td className={css.table}>{currency}</td>
+          {type === 'invoice' && <td className={css.tableCell}>Invoice</td>}
+          {type === 'withdrawal' && (
+            <td className={css.tableCell}>Withdrawal</td>
+          )}
+          {type === 'deposit' && <td className={css.tableCell}>Deposit</td>}
+          {type === 'payment' && <td className={css.tableCell}>Payment</td>}
+          <td className={css.tableCell}>{amount}</td>
+          <td className={css.tableCell}>{currency}</td>
         </tr>
       ))}
     </tbody>

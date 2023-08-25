@@ -15,10 +15,20 @@
   margin: 15px 0;
 }
 
-.status {
+.statusIsOnline {
   margin-right: 20px;
   border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  background-color: black;
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border: 0.5px solid;
+}
+
+.statusIsOffline {
+  margin-right: 20px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border: 0.5px solid;
 }

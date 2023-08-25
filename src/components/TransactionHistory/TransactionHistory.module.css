@@ -1,8 +1,15 @@
 .transactions {
   padding: 20px 0;
   width: 512px;
+  background-color: rgb(215, 253, 171);
 }
 
-/* .table {
-  align-content: center;
-} */
+.tableHead {
+  padding: 20px 0;
+}
+
+.tableCell {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid;
+}
