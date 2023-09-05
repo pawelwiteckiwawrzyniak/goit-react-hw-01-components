@@ -1,24 +1,12 @@
 import PropTypes from 'prop-types';
-import { Fragment } from 'react';
 import css from './FriendList.module.css';
-
-const FriendListItem = ({ avatar, name, isOnline }) => (
-  <Fragment>
-    {isOnline ? (
-      <span className={css.statusIsOnline}></span>
-    ) : (
-      <span className={css.statusIsOffline}></span>
-    )}
-    <img src={avatar} alt="User avatar" width="48" />
-    <p>{name}</p>
-  </Fragment>
-);
+import { FriendItem } from 'components/FriendItem/FriendItem';
 
 export const FriendList = ({ friends }) => (
   <ul className={css.friendList}>
     {friends.map(friend => (
       <li className={css.friendListItem} key={friend.id}>
-        <FriendListItem
+        <FriendItem
           avatar={friend.avatar}
           name={friend.name}
           isOnline={friend.isOnline}
@@ -28,8 +16,13 @@ export const FriendList = ({ friends }) => (
   </ul>
 );
 
-FriendListItem.propTypes = {
-  avatar: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string,
+      name: PropTypes.string,
+      isOnline: PropTypes.bool,
+      id: PropTypes.number,
+    })
+  ),
 };
